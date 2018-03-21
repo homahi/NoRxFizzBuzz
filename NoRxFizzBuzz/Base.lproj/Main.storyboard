@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,92 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NoRxFizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvd-ga-NFX">
+                                <rect key="frame" x="41" y="70" width="293" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fizz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3L-tc-sVC">
+                                <rect key="frame" x="59" y="163" width="28" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="buzz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twU-hi-AWi">
+                                <rect key="frame" x="166" y="163" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fizzbuzz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhT-ol-fUk">
+                                <rect key="frame" x="278" y="163" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZi-Se-TeQ" userLabel="-5">
+                                <rect key="frame" x="50" y="264" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-5"/>
+                                <connections>
+                                    <action selector="minus5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tx1-zw-yxH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0b-xA-Csq">
+                                <rect key="frame" x="129" y="264" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-1"/>
+                                <connections>
+                                    <action selector="minus1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ke-vt-Y0y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cg-Ua-cx0">
+                                <rect key="frame" x="232" y="264" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+1"/>
+                                <connections>
+                                    <action selector="plus1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uy9-3f-st3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLt-Hd-8TW">
+                                <rect key="frame" x="295" y="264" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+5"/>
+                                <connections>
+                                    <action selector="plus5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vKR-BD-9C7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f3L-tc-sVC" firstAttribute="baseline" secondItem="twU-hi-AWi" secondAttribute="baseline" id="04Q-Ce-xqH"/>
+                            <constraint firstItem="lvd-ga-NFX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="Aic-Bn-9R8"/>
+                            <constraint firstItem="f3L-tc-sVC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="LQD-gx-n45"/>
+                            <constraint firstItem="twU-hi-AWi" firstAttribute="leading" secondItem="f3L-tc-sVC" secondAttribute="trailing" constant="79" id="Pgn-TK-mpm"/>
+                            <constraint firstItem="RhT-ol-fUk" firstAttribute="leading" secondItem="twU-hi-AWi" secondAttribute="trailing" constant="74" id="UgY-d0-7bL"/>
+                            <constraint firstItem="twU-hi-AWi" firstAttribute="baseline" secondItem="RhT-ol-fUk" secondAttribute="baseline" id="gpl-Xn-sRO"/>
+                            <constraint firstItem="lvd-ga-NFX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qJV-ie-D4B"/>
+                            <constraint firstItem="lvd-ga-NFX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wGN-kS-lYY"/>
+                            <constraint firstItem="f3L-tc-sVC" firstAttribute="top" secondItem="lvd-ga-NFX" secondAttribute="bottom" constant="72" id="wi4-PX-9Fs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="buzz" destination="twU-hi-AWi" id="Aom-7K-kDg"/>
+                        <outlet property="fizz" destination="f3L-tc-sVC" id="RvH-vK-UzF"/>
+                        <outlet property="fizzBuzz" destination="RhT-ol-fUk" id="FxK-W3-2ts"/>
+                        <outlet property="number" destination="lvd-ga-NFX" id="Pjh-1Q-Qks"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
         </scene>
     </scenes>
 </document>
